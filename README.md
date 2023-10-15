@@ -1,5 +1,5 @@
 # phrasebook
-Clojure for the Brave and True, JVM exercise
+Clojure for the Brave and True, JVM exercise, chapter 12
 
 ## Commands
 
@@ -19,6 +19,8 @@ javac ../PirateConversation.java -- expect error, because javac is trying to fin
 javac -classpath ../ ../PirateConversation.java -- now it works, because the classpath is the parent directory ../
 
 ### Jar Files
+-- create the JAR with `jar cvfe [jar-name] [entry-point-class] [classes-to-add-into-jar...]`
+jar cvfe conversation.jar PirateConversation PirateConversation.class pirate_phrases/*.class
 
-
-
+-- run jar
+java -jar conversation.jar
